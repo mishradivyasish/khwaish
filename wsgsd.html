@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f1;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+
+        h1 {
+            color: #ff3366;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #555;
+        }
+
+        .heart {
+            color: #ff3366;
+            font-size: 4em;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 30px;
+            transition: transform 0.3s;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .button {
+            background-color: #ff3366;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 30px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #cc2a5a;
+        }
+
+        .message-box {
+            display: none;
+            background-color: #f5c6cb;
+            color: #721c24;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="fade-in">I Love You Khwaish</h1>
+    <p class="fade-in">Every moment with you is a treasure, and I can't imagine life without you.</p>
+    <div class="heart fade-in">❤️</div>
+
+    <div class="image-container fade-in">
+        <img src="our.jpg" alt="Special Memory">
+    </div>
+
+    <a href="https://www.youtube.com/watch?v=2Vv-BfVoq4g" target="_blank" class="button fade-in">Listen to Our Song</a>
+
+    <!-- Message Box that appears after button click -->
+    <div id="loveMessage" class="message-box fade-in">
+        You mean the world to me! 💕
+    </div>
+
+    <button onclick="showLoveMessage()" class="button fade-in">Click to Reveal a Message</button>
+
+    <script>
+        // JavaScript function to reveal a hidden message
+        function showLoveMessage() {
+            const message = document.getElementById('loveMessage');
+            message.style.display = 'block';
+        }
+
+        // Optional: Change background color every time the page is loaded or clicked
+        document.body.addEventListener('click', function() {
+            document.body.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+        });
+    </script>
+</body>
+</html>
